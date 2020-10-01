@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Navbar from './views/Navbar';
 import SearchForm from './views/SearchForm';
@@ -12,21 +12,19 @@ import store from './store';
 
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <Navbar />
-        <Container>
-          <Heading>
-            <i className='fas fa-cloud-sun-rain'></i> Weather App
-          </Heading>
-          <SearchForm />
-          <WeatherList />
-        </Container>
-      </Provider>
-    );
-  }
-}
+const App = () => {
+  return (
+    <Provider store={store}>
+      <Navbar />
+      <Container>
+        <Heading>
+          <i className='fas fa-cloud-sun-rain'></i> Weather App
+        </Heading>
+        <SearchForm />
+        <WeatherList />
+      </Container>
+    </Provider>
+  );
+};
 
 export default App;
