@@ -1,21 +1,22 @@
 import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import Form from '../components/Form';
 import Input from '../components/Input';
 import Button from '../components/Button';
 
-import { connect } from 'react-redux';
 import { getWeatherData } from '../actions/weather';
 
+// eslint-disable-next-line no-shadow
 const SearchForm = ({ getWeatherData }) => {
   const [description, setDescription] = useState('');
 
-  const onChange = (e) => {
+  const onChange = e => {
     setDescription(e.target.value);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
 
     // Getting weather data related to description
@@ -23,6 +24,7 @@ const SearchForm = ({ getWeatherData }) => {
   };
 
   return (
+    /* eslint-disable react/jsx-filename-extension, react/jsx-fragments */
     <Fragment>
       <Form onSubmit={onSubmit}>
         <Input

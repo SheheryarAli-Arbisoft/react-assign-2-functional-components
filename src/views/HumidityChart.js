@@ -11,11 +11,11 @@ const HumidityChart = ({
   defaultStyles,
   defaultOptions,
 }) => {
-  // Generate humidity data
-  const generateHumidityData = (forecast) => {
-    let result = [];
+  // eslint-disable-next-line no-shadow
+  const generateHumidityData = forecastData => {
+    const result = [];
 
-    forecast.forEach((forecast) => result.push(forecast.humidity));
+    forecastData.forEach(forecast => result.push(forecast.humidity));
 
     return result;
   };
@@ -35,6 +35,7 @@ const HumidityChart = ({
   });
 
   return (
+    /* eslint-disable react/jsx-filename-extension, react/jsx-fragments */
     <Fragment>
       <SubTitle>Humidity</SubTitle>
       <ChartInnerWrapper>
@@ -68,6 +69,7 @@ const HumidityChart = ({
 };
 
 HumidityChart.propTypes = {
+  /* eslint-disable react/forbid-prop-types */
   labels: PropTypes.array.isRequired,
   forecastData: PropTypes.array.isRequired,
   defaultStyles: PropTypes.object.isRequired,

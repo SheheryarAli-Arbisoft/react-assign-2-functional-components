@@ -8,6 +8,7 @@ import { ListItem } from '../components/List';
 
 const WeatherListItem = ({ weather: { name, forecast } }) => {
   return (
+    /* eslint-disable react/jsx-filename-extension, react/jsx-fragments */
     <Fragment>
       <ListItem>
         <Title>{name}</Title>
@@ -18,6 +19,7 @@ const WeatherListItem = ({ weather: { name, forecast } }) => {
 };
 
 WeatherListItem.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   weather: PropTypes.object.isRequired,
 };
 

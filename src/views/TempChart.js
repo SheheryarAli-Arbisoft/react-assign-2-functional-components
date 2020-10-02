@@ -6,11 +6,13 @@ import { ChartInnerWrapper } from '../components/Chart';
 import SubTitle from '../components/SubTitle';
 
 const TempChart = ({ labels, forecastData, defaultStyles, defaultOptions }) => {
-  // Generate temperature data
-  const generateTempData = (forecast) => {
-    let result = [];
+  // eslint-disable-next-line no-shadow
+  const generateTempData = forecastData => {
+    const result = [];
 
-    forecast.forEach((forecast) => result.push(Math.ceil(forecast.temp - 273)));
+    forecastData.forEach(forecast =>
+      result.push(Math.ceil(forecast.temp - 273))
+    );
 
     return result;
   };
@@ -30,6 +32,7 @@ const TempChart = ({ labels, forecastData, defaultStyles, defaultOptions }) => {
   });
 
   return (
+    /* eslint-disable react/jsx-filename-extension, react/jsx-fragments */
     <Fragment>
       <SubTitle>Temperature</SubTitle>
       <ChartInnerWrapper>
@@ -60,6 +63,7 @@ const TempChart = ({ labels, forecastData, defaultStyles, defaultOptions }) => {
 };
 
 TempChart.propTypes = {
+  /* eslint-disable react/forbid-prop-types */
   labels: PropTypes.array.isRequired,
   forecastData: PropTypes.array.isRequired,
   defaultStyles: PropTypes.object.isRequired,
