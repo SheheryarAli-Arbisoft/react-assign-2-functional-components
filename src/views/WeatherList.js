@@ -1,12 +1,25 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
+import { createSelector } from 'reselect';
 
 import WeatherListItem from './WeatherListItem';
 
 import { List } from '../components/List';
 
-const WeatherList = ({ weather: { loading, data } }) => {
+import { getLoadingSelector, getDataSelector } from '../selectors/weather';
+
+const WeatherList = () => {
+  const dataSelector = createSelector(
+    getLoadingSelector,
+    getDataSelector,
+    (loading, data) => ({
+      loading,
+      data,
+    })
+  );
+
+  const { loading, data } = useSelector(dataSelector);
+
   return (
     /* eslint-disable react/jsx-filename-extension, react/jsx-fragments */
     <Fragment>
@@ -21,13 +34,4 @@ const WeatherList = ({ weather: { loading, data } }) => {
   );
 };
 
-WeatherList.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  weather: PropTypes.object.isRequired,
-};
-
-const mapStateToProps = state => ({
-  weather: state.weather,
-});
-
-export default connect(mapStateToProps)(WeatherList);
+export default connect(null)(WeatherList);

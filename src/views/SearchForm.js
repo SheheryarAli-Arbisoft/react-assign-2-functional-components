@@ -1,15 +1,14 @@
 import React, { Fragment, useState } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { Form } from '../components/Form';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 
-import { getWeatherData } from '../actions/weather';
+import { LOAD_WEATHER_DATA } from '../sagas/types';
 
 // eslint-disable-next-line no-shadow
-const SearchForm = ({ getWeatherData }) => {
+const SearchForm = ({ dispatch }) => {
   const [description, setDescription] = useState('');
 
   const onChange = e => {
@@ -20,7 +19,10 @@ const SearchForm = ({ getWeatherData }) => {
     e.preventDefault();
 
     // Getting weather data related to description
-    getWeatherData(description);
+    dispatch({
+      type: LOAD_WEATHER_DATA,
+      payload: description,
+    });
   };
 
   return (
@@ -40,8 +42,4 @@ const SearchForm = ({ getWeatherData }) => {
   );
 };
 
-SearchForm.propTypes = {
-  getWeatherData: PropTypes.func.isRequired,
-};
-
-export default connect(null, { getWeatherData })(SearchForm);
+export default connect(null, null)(SearchForm);

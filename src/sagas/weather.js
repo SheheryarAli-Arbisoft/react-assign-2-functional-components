@@ -39,6 +39,8 @@ const getRequiredData = response => {
 
 // eslint-disable-next-line import/prefer-default-export
 function* getWeatherData(action) {
+  const { payload: description } = action;
+
   const data = yield select(getDataSelector);
 
   if (
@@ -48,8 +50,6 @@ function* getWeatherData(action) {
   ) {
     return;
   }
-
-  const { payload: description } = action;
 
   try {
     let result = yield call(() => axios.get(generateWeatherUrl(description)));
