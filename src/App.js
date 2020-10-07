@@ -7,7 +7,7 @@ import SearchForm from './views/SearchForm';
 import WeatherList from './views/WeatherList';
 
 import { Container } from './components/Container';
-import Heading from './components/Heading';
+import { Heading } from './components/Text';
 
 import store from './store';
 import theme from './theme';

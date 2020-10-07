@@ -7,7 +7,7 @@ const Heading = styled.div`
   font-size: ${({ theme }) => theme.size.text.heading};
   margin-bottom: ${({ theme }) => theme.spacing.xlarge};
   font-weight: bold;
-  color: #ff0000;
+  color: ${({ theme }) => theme.color.text.primary};
 
   & > i {
     margin-right: ${({ theme }) => theme.spacing.default};
@@ -34,13 +34,4 @@ const SubTitle = styled.div`
     small ? theme.spacing.small : theme.spacing.medium};
 `;
 
-const Description = styled.div`
-  font-size: ${({ theme, small }) =>
-    small ? theme.size.text.small : theme.size.text.medium};
-  color: ${({ theme }) => theme.color.text.primary};
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
-
-export { Heading, Title, SubTitle, Description };
+export { Heading, Title, SubTitle };

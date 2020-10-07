@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Charts from './Charts';
 
-import Title from '../components/Title';
+import { Title } from '../components/Text';
 import { ListItem } from '../components/List';
 
 const WeatherListItem = ({ weather: { name, forecast } }) => {

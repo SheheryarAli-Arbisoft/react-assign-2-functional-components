@@ -16,7 +16,6 @@ const List = styled.div`
 
 const ListItem = styled.div`
   box-sizing: border-box;
-  display: flex;
   width: 100%;
   padding: ${({ theme }) => theme.spacing.large};
   margin-bottom: ${({ theme, small }) =>
@@ -28,27 +27,4 @@ const ListItem = styled.div`
   box-shadow: 0 0 10px 1px ${({ theme }) => theme.color.card.border};
 `;
 
-const ListItemContent = styled.div`
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  padding: 0 15px;
-  width: 100%;
-  width: calc(
-    100% -
-      ${({ theme, small }) =>
-        small ? theme.thumbnail.small.width : theme.thumbnail.normal.width}
-  );
-
-  & > div:nth-child(2) {
-    display: flex;
-    align-items: center;
-  }
-
-  & > div:nth-child(2) > div {
-    margin-right: ${({ theme, small }) =>
-      small ? theme.spacing.medium : theme.spacing.xlarge};
-  }
-`;
-
-export { List, ListItem, ListItemContent };
+export { List, ListItem };

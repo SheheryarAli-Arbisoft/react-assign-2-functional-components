@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Line } from 'react-chartjs-2';
 
 import { ChartInnerWrapper } from '../components/Chart';
-import SubTitle from '../components/SubTitle';
+import { SubTitle } from '../components/Text';
 
 const TempChart = ({ labels, forecastData, defaultStyles, defaultOptions }) => {
   // eslint-disable-next-line no-shadow
