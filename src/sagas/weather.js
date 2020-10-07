@@ -1,10 +1,6 @@
 import { takeEvery, call, put, select } from 'redux-saga/effects';
 import axios from 'axios';
-import {
-  LOAD_WEATHER_DATA,
-  WEATHER_DATA_LOADED,
-  WEATHER_ERROR,
-} from '../sagas/types';
+import { LOAD_WEATHER_DATA, WEATHER_DATA_LOADED, WEATHER_ERROR } from './types';
 import { getDataSelector } from '../selectors/weather';
 
 const API_KEY = '8cf50a6624d851440243826f2e4d7b3a';

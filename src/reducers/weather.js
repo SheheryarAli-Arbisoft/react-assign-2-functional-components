@@ -1,4 +1,4 @@
-import { WEATHER_DATA_LOADED, WEATHER_ERROR } from '../actions/types';
+import { WEATHER_DATA_LOADED, WEATHER_ERROR } from '../sagas/types';
 
 const initialState = {
   data: [],
@@ -6,6 +6,7 @@ const initialState = {
   errors: null,
 };
 
+// eslint-disable-next-line func-names
 export default function (state = initialState, action) {
   const { type, payload } = action;
 
