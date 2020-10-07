@@ -2,9 +2,9 @@ import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import Form from '../components/Form';
-import Input from '../components/Input';
-import Button from '../components/Button';
+import { Form } from '../components/Form';
+import { Input } from '../components/Input';
+import { Button } from '../components/Button';
 
 import { getWeatherData } from '../actions/weather';
 
