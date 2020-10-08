@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 
 import { Navbar as CustomNavbar, NavbarBrand } from '../components/Navbar';
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     /* eslint-disable react/jsx-filename-extension, react/jsx-fragments */
     <Fragment>
@@ -15,5 +15,3 @@ const Navbar = () => {
     </Fragment>
   );
 };
-
-export default Navbar;

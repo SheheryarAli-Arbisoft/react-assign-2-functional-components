@@ -11,7 +11,7 @@ import {
   HumidityChart,
 } from '../components/Chart';
 
-const Charts = ({ forecastData }) => {
+export const Charts = ({ forecastData }) => {
   // Generating the labels which will be passed down to the charts
   const labels = generateLabels(forecastData);
 
@@ -37,5 +37,3 @@ Charts.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   forecastData: PropTypes.array.isRequired,
 };
-
-export default Charts;

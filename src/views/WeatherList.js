@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 
-import WeatherListItem from './WeatherListItem';
+import { WeatherListItem } from './WeatherListItem';
 
 import { List } from '../components/List';
 
 import { dataSelector } from '../selectors/weather';
 
-const WeatherList = () => {
+export const WeatherList = () => {
   const { loading, data } = useSelector(dataSelector);
 
   return (
@@ -23,5 +23,3 @@ const WeatherList = () => {
     </Fragment>
   );
 };
-
-export default WeatherList;

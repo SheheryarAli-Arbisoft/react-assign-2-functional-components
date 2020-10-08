@@ -8,7 +8,7 @@ import { Button } from '../components/Button';
 import { loadWeatherData } from '../actions/weather';
 
 // eslint-disable-next-line no-shadow
-const SearchForm = () => {
+export const SearchForm = () => {
   const dispatch = useDispatch();
 
   const [description, setDescription] = useState('');
@@ -38,5 +38,3 @@ const SearchForm = () => {
     </Fragment>
   );
 };
-
-export default SearchForm;
