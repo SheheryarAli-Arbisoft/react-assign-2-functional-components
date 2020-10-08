@@ -15,4 +15,4 @@ const dataSelector = createSelector(
   })
 );
 
-export { getLoadingSelector, getDataSelector };
+export { getLoadingSelector, getDataSelector, dataSelector };

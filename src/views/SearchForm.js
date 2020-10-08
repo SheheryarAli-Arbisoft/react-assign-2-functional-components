@@ -1,14 +1,16 @@
 import React, { Fragment, useState } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { Form } from '../components/Form';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 
-import { LOAD_WEATHER_DATA } from '../sagas/types';
+import { loadWeatherData } from '../actions/weather';
 
 // eslint-disable-next-line no-shadow
-const SearchForm = ({ dispatch }) => {
+const SearchForm = () => {
+  const dispatch = useDispatch();
+
   const [description, setDescription] = useState('');
 
   const onChange = e => {
@@ -17,12 +19,7 @@ const SearchForm = ({ dispatch }) => {
 
   const onSubmit = e => {
     e.preventDefault();
-
-    // Getting weather data related to description
-    dispatch({
-      type: LOAD_WEATHER_DATA,
-      payload: description,
-    });
+    dispatch(loadWeatherData(description));
   };
 
   return (
@@ -42,4 +39,4 @@ const SearchForm = ({ dispatch }) => {
   );
 };
 
-export default connect(null, null)(SearchForm);
+export default SearchForm;

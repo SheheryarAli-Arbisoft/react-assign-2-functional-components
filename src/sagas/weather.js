@@ -1,6 +1,10 @@
 import { takeEvery, call, put, select } from 'redux-saga/effects';
 import axios from 'axios';
-import { LOAD_WEATHER_DATA, WEATHER_DATA_LOADED, WEATHER_ERROR } from './types';
+import {
+  LOAD_WEATHER_DATA,
+  WEATHER_DATA_LOADED,
+  WEATHER_ERROR,
+} from '../actions/types';
 import { getDataSelector } from '../selectors/weather';
 
 const API_KEY = '8cf50a6624d851440243826f2e4d7b3a';
@@ -66,8 +70,6 @@ function* getWeatherData(action) {
   }
 }
 
-function* weatherSaga() {
+export function* weatherSaga() {
   yield takeEvery(LOAD_WEATHER_DATA, getWeatherData);
 }
-
-export default weatherSaga;

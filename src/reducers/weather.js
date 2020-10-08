@@ -1,4 +1,4 @@
-import { WEATHER_DATA_LOADED, WEATHER_ERROR } from '../sagas/types';
+import { WEATHER_DATA_LOADED, WEATHER_ERROR } from '../actions/types';
 
 const initialState = {
   data: [],

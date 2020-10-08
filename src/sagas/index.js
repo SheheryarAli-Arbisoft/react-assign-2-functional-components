@@ -1,3 +1,1 @@
-import weatherSaga from './weather';
-
-export { weatherSaga };
+export { weatherSaga } from './weather';
