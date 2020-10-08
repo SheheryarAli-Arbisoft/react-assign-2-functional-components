@@ -2,8 +2,11 @@ import React from 'react';
 
 import { Heading as CustomHeading } from './styled';
 
-const Heading = ({ children }) => {
+import { propTypes, defaultProps } from './props';
+
+export const Heading = ({ children }) => {
   return <CustomHeading>{children}</CustomHeading>;
 };
 
-export default Heading;
+Heading.propTypes = propTypes;
+Heading.defaultProps = defaultProps;

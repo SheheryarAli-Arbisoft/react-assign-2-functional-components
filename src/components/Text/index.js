@@ -1,5 +1,3 @@
-import Heading from './Heading';
-import Title from './Title';
-import SubTitle from './SubTitle';
-
-export { Heading, Title, SubTitle };
+export { Heading } from './Heading';
+export { Title } from './Title';
+export { SubTitle } from './SubTitle';
