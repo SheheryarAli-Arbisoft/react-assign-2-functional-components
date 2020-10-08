@@ -2,8 +2,11 @@ import React from 'react';
 
 import { ChartInnerWrapper as CustomChartInnerWrapper } from './styled';
 
-const ChartInnerWrapper = ({ children }) => {
+import { propTypes, defaultProps } from './props';
+
+export const ChartInnerWrapper = ({ children }) => {
   return <CustomChartInnerWrapper>{children}</CustomChartInnerWrapper>;
 };
 
-export default ChartInnerWrapper;
+ChartInnerWrapper.propTypes = propTypes;
+ChartInnerWrapper.defaultProps = defaultProps;

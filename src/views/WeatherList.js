@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { connect, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import WeatherListItem from './WeatherListItem';
 
@@ -24,4 +24,4 @@ const WeatherList = () => {
   );
 };
 
-export default connect(null)(WeatherList);
+export default WeatherList;

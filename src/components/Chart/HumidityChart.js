@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { Line } from 'react-chartjs-2';
 
-import { ChartInnerWrapper } from '../components/Chart';
-import { SubTitle } from '../components/Text';
+import { ChartInnerWrapper } from './ChartInnerWrapper';
+import { SubTitle } from '../Text';
 
-const HumidityChart = ({
+import { chartPropTypes, chartDefaultProps } from './props';
+
+export const HumidityChart = ({
   labels,
   forecastData,
   defaultStyles,
@@ -68,12 +69,5 @@ const HumidityChart = ({
   );
 };
 
-HumidityChart.propTypes = {
-  /* eslint-disable react/forbid-prop-types */
-  labels: PropTypes.array.isRequired,
-  forecastData: PropTypes.array.isRequired,
-  defaultStyles: PropTypes.object.isRequired,
-  defaultOptions: PropTypes.object.isRequired,
-};
-
-export default HumidityChart;
+HumidityChart.propTypes = chartPropTypes;
+HumidityChart.defaultProps = chartDefaultProps;
