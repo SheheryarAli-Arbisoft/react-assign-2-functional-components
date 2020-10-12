@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ListItem = styled.div`
   box-sizing: border-box;
-  display: flex;
   width: 100%;
   padding: ${({ theme }) => theme.spacing.large};
   margin-bottom: ${({ theme, small }) =>
