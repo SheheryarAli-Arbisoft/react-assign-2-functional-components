@@ -11,5 +11,5 @@ const Template = args => <Navbar {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {
-  children: [<NavbarBrand>Youtube Video Player</NavbarBrand>],
+  children: [<NavbarBrand>Weather App</NavbarBrand>],
 };
