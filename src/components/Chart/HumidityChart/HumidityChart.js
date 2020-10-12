@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { Line } from 'react-chartjs-2';
 
-import { ChartInnerWrapper } from './ChartInnerWrapper';
-import { SubTitle } from '../Text';
+import { ChartInnerWrapper } from '../ChartInnerWrapper';
+import { Text } from '../../Text';
 
 import { chartPropTypes, chartDefaultProps } from './props';
 
@@ -38,7 +38,7 @@ export const HumidityChart = ({
   return (
     /* eslint-disable react/jsx-filename-extension, react/jsx-fragments */
     <Fragment>
-      <SubTitle>Humidity</SubTitle>
+      <Text variant='subtitle'>Humidity</Text>
       <ChartInnerWrapper>
         <Line
           width={3200}
