@@ -1,10 +1,6 @@
 import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
-
-import { WeatherListItem } from './WeatherListItem';
-
-import { List } from '../components/List';
-
+import { List, ListItem } from '../components/List';
 import { dataSelector } from '../selectors/weather';
 
 export const WeatherList = () => {
@@ -16,9 +12,7 @@ export const WeatherList = () => {
       <List>
         {!loading &&
           data.length > 0 &&
-          data.map(weather => (
-            <WeatherListItem key={weather.id} weather={weather} />
-          ))}
+          data.map(weather => <ListItem key={weather.id} weather={weather} />)}
       </List>
     </Fragment>
   );

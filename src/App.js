@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { Navbar } from './views/Navbar';
 import { SearchForm } from './views/SearchForm';
-// import { WeatherList } from './views/WeatherList';
+import { WeatherList } from './views/WeatherList';
 import { Container } from './components/Container';
 import { Text } from './components/Text';
 import { store } from './store';
@@ -23,7 +23,7 @@ const App = () => {
             Weather App
           </Text>
           <SearchForm />
-          {/* <WeatherList /> */}
+          <WeatherList />
         </Container>
       </ThemeProvider>
     </Provider>
