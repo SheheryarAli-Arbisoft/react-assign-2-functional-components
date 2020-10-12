@@ -1,10 +1,8 @@
 import React, { Fragment } from 'react';
 import { Line } from 'react-chartjs-2';
-
 import { ChartInnerWrapper } from '../ChartInnerWrapper';
 import { Text } from '../../Text';
-
-import { chartPropTypes, chartDefaultProps } from './props';
+import { propTypes, defaultProps } from './props';
 
 export const HumidityChart = ({
   labels,
@@ -26,10 +24,6 @@ export const HumidityChart = ({
     datasets: [
       {
         ...defaultStyles,
-        backgroundColor: 'rgba(0,255,0,0.4)',
-        borderColor: 'rgba(0,255,0,1)',
-        pointBorderColor: 'rgba(0,255,0,1)',
-        pointHoverBackgroundColor: 'rgba(0,255,0,1)',
         data: generateHumidityData(forecastData),
       },
     ],
@@ -44,30 +38,12 @@ export const HumidityChart = ({
           width={3200}
           height={250}
           data={getData()}
-          options={{
-            ...defaultOptions,
-            scales: {
-              yAxes: [
-                {
-                  scaleLabel: {
-                    display: true,
-                    labelString: 'Humidity (%)',
-                  },
-                  ticks: {
-                    beginAtZero: true,
-                    min: 0,
-                    max: 100,
-                    stepSize: 50,
-                  },
-                },
-              ],
-            },
-          }}
+          options={defaultOptions}
         />
       </ChartInnerWrapper>
     </Fragment>
   );
 };
 
-HumidityChart.propTypes = chartPropTypes;
-HumidityChart.defaultProps = chartDefaultProps;
+HumidityChart.propTypes = propTypes;
+HumidityChart.defaultProps = defaultProps;

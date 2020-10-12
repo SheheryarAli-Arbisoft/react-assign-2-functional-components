@@ -1,19 +1,13 @@
 import PropTypes from 'prop-types';
 
-const propTypes = {
-  children: PropTypes.object,
-};
-
-const chartPropTypes = {
+export const propTypes = {
   labels: PropTypes.array.isRequired,
   forecastData: PropTypes.array.isRequired,
   defaultStyles: PropTypes.object.isRequired,
   defaultOptions: PropTypes.object.isRequired,
 };
 
-const defaultProps = {};
-
-const chartDefaultProps = {
+export const defaultProps = {
   defaultStyles: {
     lineTension: 0.1,
     borderCapStyle: 'butt',
@@ -27,6 +21,10 @@ const chartDefaultProps = {
     pointHoverBorderWidth: 2,
     pointRadius: 4,
     pointHitRadius: 10,
+    backgroundColor: 'rgba(255,0,0,0.4)',
+    borderColor: 'rgba(255,0,0,1)',
+    pointBorderColor: 'rgba(255,0,0,1)',
+    pointHoverBackgroundColor: 'rgba(255,0,0,1)',
   },
   defaultOptions: {
     legend: {
@@ -34,7 +32,18 @@ const chartDefaultProps = {
     },
     responsive: false,
     maintainAspectRatio: false,
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'Temperature (°C)',
+          },
+          ticks: {
+            stepSize: 10,
+          },
+        },
+      ],
+    },
   },
 };
-
-export { propTypes, chartPropTypes, defaultProps, chartDefaultProps };
