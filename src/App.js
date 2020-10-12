@@ -3,9 +3,9 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import { Navbar } from './views/Navbar';
 import { SearchForm } from './views/SearchForm';
-import { WeatherList } from './views/WeatherList';
+// import { WeatherList } from './views/WeatherList';
 import { Container } from './components/Container';
-import { Heading } from './components/Text';
+import { Text } from './components/Text';
 import { store } from './store';
 import { theme } from './theme';
 
@@ -18,12 +18,12 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Navbar />
         <Container>
-          <Heading>
+          <Text variant='heading'>
             <i className='fas fa-cloud-sun-rain' />
             Weather App
-          </Heading>
+          </Text>
           <SearchForm />
-          <WeatherList />
+          {/* <WeatherList /> */}
         </Container>
       </ThemeProvider>
     </Provider>
