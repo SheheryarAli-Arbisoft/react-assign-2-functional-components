@@ -1,16 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-
 import { Navbar } from './views/Navbar';
 import { SearchForm } from './views/SearchForm';
 import { WeatherList } from './views/WeatherList';
-
 import { Container } from './components/Container';
 import { Heading } from './components/Text';
-
-import store from './store';
-import theme from './theme';
+import { store } from './store';
+import { theme } from './theme';
 
 import './App.css';
 

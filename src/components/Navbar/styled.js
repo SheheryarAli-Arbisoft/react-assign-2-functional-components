@@ -6,12 +6,12 @@ const Navbar = styled.div`
   min-height: 56px;
   display: flex;
   align-items: center;
-  background-color: ${({ theme }) => theme.color.primary};
+  background-color: ${({ theme }) => theme.colors.primaryColor};
 `;
 
 const NavbarBrand = styled.div`
   padding-left: ${({ theme }) => theme.spacing.large};
-  color: ${({ theme }) => theme.color.text.inverted};
+  color: ${({ theme }) => theme.colors.invertedTextColor};
   font-size: 18px;
   cursor: pointer;
 

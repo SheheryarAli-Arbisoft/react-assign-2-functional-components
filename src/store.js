@@ -11,12 +11,10 @@ const sagaMiddleware = createSagaMiddleware();
 
 const middleware = [sagaMiddleware];
 
-const store = createStore(
+export const store = createStore(
   rootReducer,
   initialState,
   composeWithDevTools(applyMiddleware(...middleware))
 );
 
 sagaMiddleware.run(weatherSaga);
-
-export default store;

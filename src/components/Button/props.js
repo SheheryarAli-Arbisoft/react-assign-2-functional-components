@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
 
-const propTypes = {
-  children: PropTypes.object,
+export const propTypes = {
+  children: PropTypes.string,
+  variant: PropTypes.string,
+  size: PropTypes.string,
 };
 
-const defaultProps = {};
-
-export { propTypes, defaultProps };
+export const defaultProps = {
+  children: '',
+  variant: '',
+  size: 'normal',
+};
