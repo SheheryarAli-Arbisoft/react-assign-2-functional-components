@@ -4,6 +4,7 @@ import { propTypes, defaultProps } from './props';
 import { ChartContainer } from '../ChartContainer';
 import { ChartOuterWrapper } from '../ChartOuterWrapper';
 import { TempChart } from '../TempChart';
+import { PressureChart } from '../PressureChart';
 import { generateLabels } from '../../../utils';
 
 export const Charts = ({ forecastData }) => {
@@ -17,7 +18,7 @@ export const Charts = ({ forecastData }) => {
         <TempChart labels={labels} forecastData={forecastData} />
       </ChartOuterWrapper>
       <ChartOuterWrapper>
-        {/* <PressureChart labels={labels} forecastData={forecastData} /> */}
+        <PressureChart labels={labels} forecastData={forecastData} />
       </ChartOuterWrapper>
       <ChartOuterWrapper>
         {/* <HumidityChart labels={labels} forecastData={forecastData} /> */}
