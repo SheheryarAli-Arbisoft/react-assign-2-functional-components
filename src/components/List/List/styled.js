@@ -4,7 +4,7 @@ export const List = styled.div`
   box-sizing: border-box;
   width: 100%;
   min-height: 100px;
-  margin-top: ${({ theme, small }) => (small ? '0' : theme.spacing.xlarge)};
+  margin-top: ${({ theme }) => theme.spacing.xlarge};
   padding: 0 ${({ theme }) => theme.spacing.large};
   padding-top: ${({ theme }) => theme.spacing.xlarge};
   border-style: solid;

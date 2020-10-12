@@ -9,6 +9,7 @@ export const text = {
   getDisplay(variant) {
     switch (variant) {
       case 'heading':
+      case 'subtitle':
         return 'flex';
       default:
         return 'block';
@@ -24,16 +25,16 @@ export const text = {
         return primaryTextColor;
     }
   },
-  getSize(variant, small) {
+  getSize(variant) {
     switch (variant) {
       case 'heading':
         return textSize.heading;
       case 'title':
-        return small ? textSize.normal : textSize.title;
+        return textSize.title;
       case 'subtitle':
-        return small ? textSize.small : textSize.subtitle;
+        return textSize.subtitle;
       case 'description':
-        return small ? textSize.small : textSize.description;
+        return textSize.description;
       default:
         return '0';
     }

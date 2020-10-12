@@ -4,8 +4,7 @@ export const ListItem = styled.div`
   box-sizing: border-box;
   width: 100%;
   padding: ${({ theme }) => theme.spacing.large};
-  margin-bottom: ${({ theme, small }) =>
-    small ? theme.spacing.medium : theme.spacing.xlarge};
+  margin-bottom: ${({ theme }) => theme.spacing.xlarge};
   border-style: solid;
   border-width: 1px;
   border-color: ${({ theme }) => theme.card.border};

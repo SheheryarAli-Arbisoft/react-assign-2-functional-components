@@ -4,7 +4,7 @@ export const infoColor = '#1bacbf';
 export const dangerColor = '#bf441b';
 export const defaultColor = '#ededed';
 
-export const headingTextColor = '#ff0000';
+export const headingTextColor = '#000000';
 export const primaryTextColor = '#000000';
 export const secondaryTextColor = '#7a7a7a';
 export const invertedTextColor = '#ffffff';
