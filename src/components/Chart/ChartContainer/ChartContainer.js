@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { ChartContainer as CustomChartContainer } from './styled';
-
 import { propTypes, defaultProps } from './props';
 
 export const ChartContainer = ({ children }) => {

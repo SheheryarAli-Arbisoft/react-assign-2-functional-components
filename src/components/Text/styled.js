@@ -11,9 +11,6 @@ const Text = styled.div`
   font-weight: ${({ theme, variant }) => theme.text.getWeight(variant)};
   margin-bottom: ${({ theme, small }) =>
     small ? theme.spacing.small : theme.spacing.medium};
-  white-space: ${({ full }) => (full ? 'none' : 'nowrap')};
-  overflow: hidden;
-  text-overflow: ellipsis;
 
   & > i {
     margin-right: ${({ theme, small }) =>

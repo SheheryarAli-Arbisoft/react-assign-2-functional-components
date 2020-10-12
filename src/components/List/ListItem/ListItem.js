@@ -2,12 +2,13 @@ import React from 'react';
 import { ListItem as CustomListItem } from './styled';
 import { propTypes, defaultProps } from './props';
 import { Text } from '../../Text';
+import { Charts } from '../../Chart';
 
 export const ListItem = ({ weather: { name, forecast }, ...rest }) => {
   return (
     <CustomListItem {...rest}>
       <Text variant='title'>{name}</Text>
-      {/* <Charts forecastData={forecast} /> */}
+      <Charts forecastData={forecast} />
     </CustomListItem>
   );
 };

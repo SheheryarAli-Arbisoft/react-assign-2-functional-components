@@ -1,12 +1,8 @@
 import React from 'react';
 import { propTypes, defaultProps } from './props';
-import {
-  ChartOuterWrapper,
-  TempChart,
-  PressureChart,
-  HumidityChart,
-} from '../components/Chart';
+// import { TempChart, PressureChart, HumidityChart } from '../components/Chart';
 import { ChartContainer } from '../ChartContainer';
+import { ChartOuterWrapper } from '../ChartOuterWrapper';
 import { generateLabels } from '../../../utils';
 
 export const Charts = ({ forecastData }) => {
@@ -17,13 +13,13 @@ export const Charts = ({ forecastData }) => {
     /* eslint-disable react/jsx-filename-extension, react/jsx-fragments */
     <ChartContainer>
       <ChartOuterWrapper>
-        <TempChart labels={labels} forecastData={forecastData} />
+        {/* <TempChart labels={labels} forecastData={forecastData} /> */}
       </ChartOuterWrapper>
       <ChartOuterWrapper>
-        <PressureChart labels={labels} forecastData={forecastData} />
+        {/* <PressureChart labels={labels} forecastData={forecastData} /> */}
       </ChartOuterWrapper>
       <ChartOuterWrapper>
-        <HumidityChart labels={labels} forecastData={forecastData} />
+        {/* <HumidityChart labels={labels} forecastData={forecastData} /> */}
       </ChartOuterWrapper>
     </ChartContainer>
   );
