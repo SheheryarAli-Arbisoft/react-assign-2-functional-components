@@ -1,8 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { Form } from '../components/Form';
-import { Input } from '../components/Input';
+import { Form, Input } from '../components/Form';
 import { Button } from '../components/Button';
 
 import { loadWeatherData } from '../actions/weather';
