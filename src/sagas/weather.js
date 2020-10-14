@@ -7,16 +7,16 @@ import {
 } from '../actions/types';
 import { getDataSelector } from '../selectors/weather';
 
-const API_KEY = '8cf50a6624d851440243826f2e4d7b3a';
+export const API_KEY = '8cf50a6624d851440243826f2e4d7b3a';
 
 /* eslint-disable no-console */
 
 // Generate weather url
-const generateWeatherUrl = description =>
+export const generateWeatherUrl = description =>
   `https://api.openweathermap.org/data/2.5/forecast?q=${description}&appid=${API_KEY}`;
 
 // Get required data from response
-const getRequiredData = response => {
+export const getRequiredData = response => {
   const { id, name } = response.city;
 
   const result = { id, name, forecast: [] };
